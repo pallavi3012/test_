@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Name and location</title>
+		<link rel="stylesheet" href="NameLocation.css" />
+	</head>
+	<body>
+		<div class="hero-div center container">
+			<label>Enter Name</label>
+			<input type="text" id="name" />
+			<label>Enter Location</label>
+			<input type="text" id="loc" /><br /><br />
+			<button type="button" onclick="display_Name_Location()">
+				Click Here
+			</button>
+
+			<h1 id="demo"></h1>
+		</div>
+		<script>
+			class Employee {
+				constructor(name, location) {
+					this.name = name;
+					this.year = location;
+				}
+				display() {
+					return this.name + " from " + this.year;
+				}
+			}
+
+			function display_Name_Location() {
+				var name = document.getElementById("name").value;
+				var loc = document.getElementById("loc").value;
+				let emp = new Employee(name, loc);
+				document.getElementById("demo").innerHTML = emp.display();
+			}
+		</script>
+	</body>
+</html>
